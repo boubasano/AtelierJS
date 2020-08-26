@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /*   // boucle for
+       var string = '';
+      for (var a = 1;a<=10; a++){
+           var b = a*2 ;
+           string = string + " " + b;
+       }
+      console.log(string);
+    */
+
+    // boucle while
+    /*  var string = '';
+      var a = 1;
+      var b = 1;
+      while (a <= 10) {
+          b = a * 2;
+          string = string + " " + b;
+          a++;
+      }
+      console.log(string);*/
+
+    // boucle do while
+    /*
+        string = '';
+       var a=1;
+       var b=1;
+        do {
+            b = a*2;
+            string = string + " " + b;
+            a++;
+        }while (a<=10);
+        console.log(string);*/
+
+    // boucle for pour afficher la table de multiplication jusqu'à 10
+    var b = 1;
+    var string = " ";
+    for (var a = 1; a <= 10; a++) {
+        for (var i = 1; i <= 10; i++) {
+            b = a * i;
+            string = string + " " + b;
+        }
+        string = string + "\n";
+    }
+    console.log(string);
+
+
+</script>
+
+</body>
+</html>

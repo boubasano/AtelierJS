@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*Créer un tableau paysCapitales. Chaque élément est un objet de type { pays: 'nom du pays', capitale: 'la capitale'} )
+    Ajouter 3 éléments ds ce tableau*/
+
+    let paysCapitales =[
+        {pays:'France', capitale:'Paris'},
+        {pays:'Guinée', capitale:'Conakry'},
+        {pays:'Belgique', capitale:'Bruxelles'}
+        ];
+
+    paysCapitales.forEach((element) => {
+        console.log(element.pays);
+    });
+
+    let capitales = paysCapitales.map(element => {
+        return element.capitale;
+    });
+    console.log(capitales);
+
+    // UTILISATION  DE  FILTER
+    /*Avec [].filter
+    A partir d'un tableau d'entiers:
+        [ 1000,50,2,30,25, 200]
+    Récupérer puis afficher le tableau des éléments > 100*/
+
+    let nombres = [1000,50,2,30,25, 200];
+    let filterElement = nombres.filter(element => {
+
+        while(element < 100)
+        return nombres.push(25);
+    });console.log(filterElement);
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>l

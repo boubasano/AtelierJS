@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="titre"></div>
+    <div id="contenu">
+        <h1>Liste des capitales</h1>
+        <div id="capitales">
+
+        </div>
+    </div>
+<script>
+    let paysCapitales =[
+        {pays:'France', capitale:'Paris'},
+        {pays:'Guinée', capitale:'Conakry'},
+        {pays:'Belgique', capitale:'Bruxelles'}
+    ];
+
+    paysCapitales.forEach((element) => {
+        console.log(element.pays);
+    });
+
+
+
+    // je vais boucler sur chaque element pour afficher les capitales
+
+    paysCapitales.forEach((element) => {
+    // je vais créer un élement div qui va stocker les élements que je souhaite afficher
+    let madiv = document.createElement("div");
+
+    //je vais injecter mes données stockées dans ma nouvelle div
+    madiv.innerHTML = element.capitale;
+
+    // je vais cibler l'id de mon élement HTML dans lequel je souhaite que l'affichage se passe
+    let divCapitales = document.querySelector('#capitales');
+
+    // a ce niveau je vais mettre mes élements l'un à la suite de l'autre par rapport au parent
+        divCapitales.appendChild(madiv);
+    });
+
+
+
+
+
+</script>
+
+</body>
+</html>
+

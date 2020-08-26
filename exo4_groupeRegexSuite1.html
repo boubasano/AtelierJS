@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text2 = prompt("votre texte içi");
+    let regex = /([a-z àé]{5})([a-zï,-]{2,})([ a-zA-Z ]{4})([0-9-]{2,})/i;
+    let result2 = text2.match(regex);
+
+    if (result2 != null){
+        alert(result2[2]);
+        alert(result2[4]);
+    }
+</script>
+
+</body>
+</html>

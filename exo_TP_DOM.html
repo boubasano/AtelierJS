@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Liste des pays</h1>
+<div id="pays">
+
+</div>
+<script>
+
+    /*Exercice:
+Créer une page HTML avec un div nommé 'pays' vide
+Créer une classe CSS 'pair' et une classe CSS 'impair', paire arrière plan blanc, impair arrière plan bleu
+Avec JS:
+
+Créer un tableau simple avec 10 pays
+
+Remplir votre div pays avec des divs contenant chacune des pays
+
+Chaque élément pair aura la classe css pair, chaque impair la classe impair*/
+
+    let pays = ['Guinée', 'France', 'Belgique', 'USA', 'Canada', 'Senegal', 'Nigeria', 'Allemagne', 'Irlande', 'Angleterre'];
+
+    // je vais boucler sur chaque element pour afficher les capitales
+
+    pays.forEach((element, indice) => {
+        // je vais créer un élement div qui va stocker les élements que je souhaite afficher
+        let madiv = document.createElement("div");
+
+        //je vais injecter mes données stockées dans ma nouvelle div grace à innerHTML
+        madiv.innerHTML = element;
+
+        if (indice%2 == 0){
+            //je cible l'emplacement <div> où je souhaite appliquer mon css
+            madiv.classList.add('pair');
+        }else
+            //je cible l'emplacement <div> où je souhaite appliquer mon css
+            madiv.classList.add('impair');
+
+        // je vais cibler l'id de mon élement HTML dans lequel je souhaite que l'affichage se passe
+        let divPays = document.querySelector('#pays');
+
+        // a ce niveau je vais mettre mes élements l'un à la suite de l'autre par rapport au parent
+        divPays.appendChild(madiv);
+
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

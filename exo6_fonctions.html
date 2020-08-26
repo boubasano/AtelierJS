@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // faire une fonction qui calcule la puissance d'un nombre
+    /*   let a=1;
+       let b=1;
+       let puissance = (a,b) =>{
+           let result = a**b;
+           return result;
+       };
+       console.log (puissance(2,8));
+       console.log (puissance(3,3));*/
+
+
+    let puissance = (nombre, puiss) => {
+        let result = 1;
+        for (let i = 0; i < puiss; i++) {
+            result *= nombre;
+        }
+        return result;
+    };
+
+    console.log(puissance(7, 2));
+
+    /*
+    Ecrire une fonction qui renvoie un tableau.
+
+    Utilisation:
+
+    let tab = creerTableau( 5, '*'); // ["*","*","*","*","*"]
+    let tab2 = creerTableau( 3, '?'); // ["?","?","?"]
+ */
+
+    let creerTableau = (nbreElements, elements) => {
+        let tab = new Array(nbreElements);
+        //je rempli mon tableau avec l'étoile
+        tab = tab.fill(elements);
+        return tab;
+    };
+    console.log(creerTableau(5, '*'));
+    console.log(creerTableau(3, '?'));
+
+    // Utilisation d'une fonction map
+
+    let couleur = ["rouge", "vert", "jaune"];
+    let majuscules = couleur.map(element => {
+        return element.toUpperCase();
+    });
+
+    console.log(majuscules);
+
+    // utilisation de filter
+    /*Ecrre un fonction qui fait quasi pareil que l'Ex4,
+           mais qui ne modifie pas le tableau passé en param,
+           mais return un nouveau tableau avec chaque élém en MAJ.*/
+
+    let noms = ["rouge", "vert", "jaune", "noir", "orange"];
+    let filterElement = noms.filter(element => {
+        return element.length > 4;
+    });
+
+    console.log(filterElement);
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

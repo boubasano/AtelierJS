@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        // j'initialise le nombre aléatoire choisi aléatoirement en l'arrondissant à l'entier
+        // Math.floor permet de definir l'intervalle du Math.random
+        var nombre = Math.floor(Math.random()*100 +1);
+
+        do {
+            var choix = prompt("Entrez un nombre entre 1 et 100");
+
+            //je fais la verification du nombre entré par l'utilisateur et celui correspondant au random
+            if (choix < nombre) {
+                alert("c'est plus grand");
+            }
+            else if (choix > nombre)
+            {
+                alert("c'est plus petit");
+            }
+        else
+            alert("Bingo !! vous avez trouvé");
+        }
+        // à ce stade ma 1ere boucle va tourner tant que la condition est vérifiée
+
+        while (choix != nombre);
+
+        // je redemande à l'utilisateur de recommencer la partie s'il le souhaite
+        var recommencer = prompt("Voulez-vous recommencer la partie ? ( O / N )");
+    }
+    // la condition de ce while recommencera une nouvelle boucle et ainsi de suite
+    while (recommencer == "O");
+</script>
+
+</body>
+</html>
+

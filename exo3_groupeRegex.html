@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var adresseMail = prompt("tapez votre adresse mail içi");
+    var regex = /([a-zA-Z]{2,})([@])([a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})/i;
+    var resultat = adresseMail.match(regex);
+
+    if (resultat != null){
+        alert(resultat[1]);
+        alert(resultat[3]);
+
+    }
+
+</script>
+
+</body>
+</html>

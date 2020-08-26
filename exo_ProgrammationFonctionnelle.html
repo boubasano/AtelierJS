@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*Ex1
+    Avec forEach, afficher en majuscule chaque élément d'un tableau*/
+
+
+
+    // Utilisation d'un forEach
+    // EXO1-------------------
+
+    let noms = ["rouge", "vert", "jaune", "noir", "orange"];
+    noms.forEach((element) => {
+        console.log(element.toUpperCase());
+    });
+
+    /*Ex2
+    Avec forEach, afficher le carré de chaque élément d'un tableau de nombres*/
+    let nombres = [1, 2, 3, 4, 5];
+    nombres.forEach((element) => {
+        console.log(element * element);
+    });
+
+
+    // Utilisation d'une fonction map
+    //Exo1
+    let couleur = ["rouge", "vert", "jaune"];
+    let majuscules = couleur.map(element => {
+        return element.toUpperCase();
+    });
+    console.log(majuscules);
+
+    //Exo2
+
+    // cas d'un return avec affichage hors de la fonction
+    nombres = [1, 2, 3, 4, 5,];
+    let nouveauTableau = nombres.map(element => {
+        let result = element;
+        let result1 = element*element;
+        let result2 = element*element*element;
+
+        return [result, result1,result2];
+    });
+    console.log(nouveauTableau);
+
+
+    // cas d'un console.log dans la fonction
+    nombres = [1, 2, 3, 4, 5,];
+    nombres.map(element => {
+        let result = element;
+        let result1 = element*element;
+        let result2 = element*element*element;
+
+        console.log([result, result1,result2]);
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
